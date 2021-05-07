@@ -15,7 +15,7 @@ const Footer = () => (
     <div className="footer-social-links">
       <a
         href="https://www.google.com"
-        targe="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className="facebook"
       >
@@ -23,7 +23,7 @@ const Footer = () => (
       </a>
       <a
         href="https://www.google.com"
-        targe="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className="twitter"
       >
@@ -31,7 +31,7 @@ const Footer = () => (
       </a>
       <a
         href="https://www.google.com"
-        targe="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className="instagram"
       >
@@ -39,7 +39,7 @@ const Footer = () => (
       </a>
       <a
         href="https://www.google.com"
-        targe="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className="google"
       >
@@ -47,7 +47,7 @@ const Footer = () => (
       </a>
       <a
         href="https://www.google.com"
-        targe="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className="linkedin"
       >
