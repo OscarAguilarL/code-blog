@@ -2,6 +2,7 @@ import { graphql, StaticQuery } from "gatsby"
 import * as React from "react"
 import Post from "../components/Post"
 import { Row, Col } from "reactstrap"
+import Sidebar from "../components/Sidebar"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,7 +10,7 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Home page!</h1>
+    <h1>Recent Post</h1>
     <Row>
       <Col md="8">
         <StaticQuery
@@ -36,7 +37,7 @@ const IndexPage = () => (
       </Col>
 
       <Col md="4">
-        <div style={{ width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.4)" }}></div>
+        <Sidebar />
       </Col>
     </Row>
   </Layout>
@@ -67,7 +68,7 @@ const indexQuery = graphql`
           excerpt
         }
       }
-    }	
+    }
   }
 `
 

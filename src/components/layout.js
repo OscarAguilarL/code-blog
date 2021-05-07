@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./Footer"
 import '../styles/index.scss'
 
 const Layout = ({ children }) => {
@@ -25,10 +26,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <script src="https://kit.fontawesome.com/4222f7ade9.js" crossOrigin="anonymous"></script>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="container" id="content">
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }

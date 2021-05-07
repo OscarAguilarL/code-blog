@@ -1,10 +1,10 @@
 ---
 title: "Third Post - Third one"
-date: 2021-04-05 4:23:00
+date: 2021-06-05 4:23:00
 author: "Jon Doe"
 path: "third-post"
 image: "../../images/javascript.jpg"
-tags: 
+tags:
 - code
 - tutorial
 - Web Development
