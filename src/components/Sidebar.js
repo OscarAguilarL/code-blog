@@ -1,6 +1,6 @@
-import { graphql, StaticQuery, Link } from 'gatsby';
-import React from 'react';
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from 'reactstrap';
+import React from 'react'
+import { Card, CardTitle, CardBody, Form, FormGroup, Input } from 'reactstrap'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Sidebar = () => (
@@ -12,11 +12,13 @@ const Sidebar = () => (
         </CardTitle>
         <Form className="text-center">
           <FormGroup>
-            <Input type="email" name="email" placeholder="Your email address..." />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Your email address.."
+            />
           </FormGroup>
-          <button
-            className="btn btn-outline-success text-uppercase"
-          >
+          <button className="btn btn-outline-success text-uppercase">
             Subscribe
           </button>
         </Form>
@@ -29,7 +31,7 @@ const Sidebar = () => (
         </CardTitle>
         <img
           src="https://via.placeholder.com/320x200"
-          alt="Advertesiment"
+          alt="Advert"
           style={{ width: '100%' }}
         />
       </CardBody>
@@ -37,7 +39,7 @@ const Sidebar = () => (
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
-          Recent Post
+          Recent Posts
         </CardTitle>
         <StaticQuery
           query={sidebarQuery}
@@ -69,33 +71,31 @@ const Sidebar = () => (
 )
 
 const sidebarQuery = graphql`
-query sidebarQuery {
-  allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
-    limit: 3
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          image {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid
+  query sidebarQuery {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
-        }
-        fields{
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
   }
-}
 `
 
-export default Sidebar;
-
-
+export default Sidebar
