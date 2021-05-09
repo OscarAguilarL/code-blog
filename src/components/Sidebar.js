@@ -86,7 +86,7 @@ const Sidebar = ({ author, authorFluid }) => (
               placeholder="Your email address.."
             />
           </FormGroup>
-          <button className="btn btn-outline-success text-uppercase">
+          <button className="btn btn-outline-success text-uppercase" disabled>
             Subscribe
           </button>
         </Form>
