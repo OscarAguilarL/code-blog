@@ -1,7 +1,7 @@
 ---
 title: "Third Post - Third one"
 date: 2021-06-05 4:23:00
-author: "Jon Doe"
+author: "Oscar Aguilar"
 image: "../../images/javascript.jpg"
 tags:
 - code
