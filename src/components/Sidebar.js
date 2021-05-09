@@ -1,5 +1,13 @@
 import React from 'react'
-import { Card, CardTitle, CardBody, CardText, Form, FormGroup, Input } from 'reactstrap'
+import {
+  Card,
+  CardTitle,
+  CardBody,
+  CardText,
+  Form,
+  FormGroup,
+  Input
+} from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -107,7 +115,7 @@ const Sidebar = ({ author, authorFluid }) => (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card key={node.id}>
-                  <Link to={node.fields.slug}>
+                  <Link to={"../" + node.fields.slug}>
                     <Img
                       className="card-image-top"
                       fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -115,7 +123,7 @@ const Sidebar = ({ author, authorFluid }) => (
                   </Link>
                   <CardBody>
                     <CardTitle>
-                      <Link to={node.fields.slug}>
+                      <Link to={"../" + node.fields.slug}>
                         {node.frontmatter.title}
                       </Link>
                     </CardTitle>

@@ -34,7 +34,10 @@ const SinglePost = ({ data, pageContext }) => {
     >
       <Seo title={post.title} />
       <Card>
-        <Img className="card-image-top" fluid={post.image.childImageSharp.fluid} />
+        <Img
+          className="card-image-top"
+          fluid={post.image.childImageSharp.fluid}
+        />
         <CardBody>
           <CardSubtitle>
             <span className="text-info">{post.date}</span> by{' '}
@@ -43,9 +46,9 @@ const SinglePost = ({ data, pageContext }) => {
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
             {post.tags.map(tag => (
-              <li key={tag} >
+              <li key={tag}>
                 <Link to={`/tag/${slugify(tag)}`}>
-                  <Badge color="primary"> {tag} </Badge>
+                  <Badge color="primary">{tag}</Badge>
                 </Link>
               </li>
             ))}
