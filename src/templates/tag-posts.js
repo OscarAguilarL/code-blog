@@ -13,7 +13,7 @@ const tagPosts = ({ data, pageContext }) => {
     <Layout pageTitle={pageHeader}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post key={node.id}
-          slug={node.fields.slug}
+          slug={"../../" + node.fields.slug}
           title={node.frontmatter.title}
           author={node.frontmatter.author}
           date={node.frontmatter.date}
